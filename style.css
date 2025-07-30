@@ -712,6 +712,7 @@ body {
     height: 50vmax;
   }
 }
+
 /* Footer Styles */
 .footer {
     background-color: grey;
@@ -858,4 +859,10 @@ body {
     .footer-section p {
         justify-content: center;
     }
+}
+/* Add this to your CSS */
+.footer {
+    position: relative;
+    z-index: 1;
+    background-color: #1d3557 !important; /* Force the color */
 }
