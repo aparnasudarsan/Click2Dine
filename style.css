@@ -16,8 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* ///////////..utility classes../////////// */
-
+/* Utility classes */
 .container {
   max-width: 1200px;
   width: 90%;
@@ -46,10 +45,7 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
-/* ............/navbar/............ *
-
-/* desktop mode............/// */
-
+/* Navbar */
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
@@ -103,8 +99,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ............//// Showcase styling ////......... */
-
+/* Showcase area */
 .showcase-area {
   height: 50vh;
   background: linear-gradient(
@@ -131,8 +126,7 @@ body {
   margin-top: 1.5em;
 }
 
-/* ......//about us//...... */
-
+/* About section */
 #about {
   padding: 50px 0;
   background: #f5f5f7;
@@ -161,28 +155,14 @@ body {
 .about-img {
   flex: 1 1 400px;
   padding: 30px;
-  transform: translateX(150%);
-  animation: about-img-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-img-animation {
-  100% {
-    transform: translate(0);
-  }
+  transform: translateX(0);
 }
 
 .about-text {
   flex: 1 1 400px;
   padding: 30px;
   margin: auto;
-  transform: translate(-150%);
-  animation: about-text-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-text-animation {
-  100% {
-    transform: translate(0);
-  }
+  transform: translateX(0);
 }
 
 .about-img img {
@@ -194,8 +174,7 @@ body {
   object-position: right;
 }
 
-/* ..........////Food category///........... */
-
+/* Food category */
 #food {
   padding: 5rem 0 10rem 0;
 }
@@ -259,7 +238,6 @@ body {
   background: rgba(0, 0, 0, 0.871);
   opacity: 0;
   z-index: 1;
-
   transform: scaleY(0);
   transform-origin: 100% 100%;
   transition: all 0.3s ease-in-out;
@@ -275,8 +253,7 @@ body {
   top: 40%;
 }
 
-/* .........../Food Menu/............ */
-
+/* Food menu */
 .food-menu-heading {
   text-align: center;
   font-size: 3.4rem;
@@ -327,8 +304,7 @@ body {
   font-weight: 700;
 }
 
-/* ........./ Testimonial /.......... */
-
+/* Testimonials */
 #testimonials {
   padding: 5rem 0;
   background: rgba(243, 243, 243);
@@ -372,8 +348,7 @@ body {
   margin: auto;
 }
 
-/* ........ Contact Us........... */
-
+/* Contact section */
 #contact {
   padding: 5rem 0;
   background: rgb(226, 226, 226);
@@ -438,6 +413,7 @@ body {
   font-size: 1.3rem;
 }
 
+/* Footer */
 #footer h2 {
   text-align: center;
   font-size: 1.8rem;
@@ -447,8 +423,106 @@ body {
   background: rgb(65, 65, 65);
 }
 
-/* ......../ media query /.......... */
+/* Social icons */
+.social-icons {
+  text-align: center;
+  margin: 30px 0;
+}
 
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 12px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff7043;
+  transform: scale(1.2);
+}
+
+/* Chefs section */
+.chefs-section {
+  padding: 60px 20px;
+  background: #fff7f0;
+  text-align: center;
+}
+
+.chef-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.chef-card {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+}
+
+.chef-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.chef-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #d84315;
+}
+
+.chef-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Location section */
+.location-section {
+  padding: 60px 20px;
+  background: #fef9f4;
+  text-align: center;
+}
+
+.location-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.map iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.site-logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e63946;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.site-logo i {
+  color: #1d3557;
+  font-size: 2rem;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
   .navbar {
     opacity: 0.95;
@@ -554,8 +628,6 @@ body {
     transform: rotate(-35deg);
   }
 
-  /* ......./ food /......... */
-
   .food-container {
     flex-direction: column;
     align-items: stretch;
@@ -579,8 +651,8 @@ body {
     font-size: 65%;
   }
 
-  .navbar .menu-items li{
-      font-size: 1.6rem;
+  .navbar .menu-items li {
+    font-size: 1.6rem;
   }
 
   .testimonial-container {
@@ -639,88 +711,4 @@ body {
   .showcase-area {
     height: 50vmax;
   }
-}
-.social-icons {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.social-icons a {
-  color: #333;
-  font-size: 24px;
-  margin: 0 12px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ff7043; /* or your brand color */
-  transform: scale(1.2);
-}
-.chefs-section {
-  padding: 60px 20px;
-  background: #fff7f0;
-  text-align: center;
-}
-.chef-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-.chef-card {
-  background: white;
-  padding: 20px;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.chef-card:hover {
-  transform: translateY(-10px);
-}
-.chef-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-.chef-card h4 {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
-  color: #d84315;
-}
-.chef-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.location-section {
-  padding: 60px 20px;
-  background: #fef9f4;
-  text-align: center;
-}
-.location-section p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-.map iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-.site-logo {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #e63946; /* Primary red color */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-.site-logo i {
-  color: #1d3557; /* Dark blue for icon */
-  font-size: 2rem;
 }
